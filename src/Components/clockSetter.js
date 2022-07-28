@@ -36,7 +36,9 @@ export default function ClockSetter(props) {
 				<button type='submit' onClick={(evt) => {
 					evt.preventDefault();
 					if(name !== '' && timeZone !== ''){
-						submit(name, timeZone);
+						const time = moment();
+						console.log(time);
+						submit(name, timeZone, time);
 						setName('');
 						setTimeZone('');
 					}
